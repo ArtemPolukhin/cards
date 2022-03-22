@@ -1,0 +1,140 @@
+$image-side: 20rem;
+$card-height: 40rem;
+$card-width: 20rem;
+$filter-height: 5rem;
+$main-width: 90rem;
+
+.data {
+  width: $main-width;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 90rem;
+
+  &__button {
+    width: 2rem;
+    height: 2rem;
+    user-select: none;
+
+    &_delete {
+      width: 1.4rem;
+      height: 1.4rem;
+      align-self: end;
+      opacity: .3;
+      transform: translate(2.5rem, -.5rem);
+    }
+
+    &_like {
+      align-self: start;
+      opacity: .7;
+
+      &_liked {
+        opacity: 1;
+        color: red;
+      }
+    }
+  }
+}
+
+.filter-wrapper {
+  position: relative;
+  left: 2%;
+  width: $main-width;
+  user-select: none;
+}
+
+.button-filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.6rem;
+  font-size: 1.6rem;
+  gap: 1rem;
+  width: 10rem;
+  height: 2.8rem;
+  border: .1rem solid rgba(0, 0, 0, .2);
+  color: rgba(0, 0, 0, .6);
+  border-radius: 1rem;
+  transition: .4s;
+
+  &:active {
+    transform: translateY(.2rem);
+  }
+}
+
+.card {
+  width: $card-width;
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: .5rem;
+
+  border: 1px solid rgba(0, 0, 0, .1);
+  box-shadow: .1rem .1rem 1rem rgba(0, 0, 0, .1);
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+
+  &__main-image {
+    width: $image-side;
+    height: $image-side;
+
+    border-radius: 1rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+  }
+
+  &__title {
+    height: 2rem;
+    width: $image-side;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}
+
+.empty {
+  margin: 0 auto;
+  position: relative;
+  left: 100%;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, auto);
+    width: 60rem;
+  }
+
+  .filter-wrapper {
+    width: 60rem;
+  }
+
+  .empty {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .cards {
+    grid-template-columns: auto;
+    width: 40rem;
+  }
+
+  .filter-wrapper {
+    width: 40rem;
+    left: 12%;
+  }
+
+  .empty {
+    left: 0%;
+  }
+}
+

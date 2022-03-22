@@ -1,0 +1,11 @@
+.app {
+  min-height: calc(100vh - 2rem);
+  min-width: calc(100vw - 2rem);
+  
+  margin-top: 5rem;
+
+  display: flex;
+  
+  justify-content: center;
+  align-items: flex-start;
+}

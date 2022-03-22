@@ -1,0 +1,15 @@
+.app {
+  min-height: calc(100vh - 2rem);
+  min-width: calc(100vw - 2rem);
+  margin-top: 5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+/*# sourceMappingURL=app.css.map */

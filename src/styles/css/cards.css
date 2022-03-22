@@ -1,0 +1,170 @@
+.data {
+  width: 90rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  width: 90rem;
+}
+
+.cards__button {
+  width: 2rem;
+  height: 2rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.cards__button_delete {
+  width: 1.4rem;
+  height: 1.4rem;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+  opacity: .3;
+  -webkit-transform: translate(2.5rem, -0.5rem);
+          transform: translate(2.5rem, -0.5rem);
+}
+
+.cards__button_like {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  opacity: .7;
+}
+
+.cards__button_like_liked {
+  opacity: 1;
+  color: red;
+}
+
+.filter-wrapper {
+  position: relative;
+  left: 2%;
+  width: 90rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.button-filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.6rem;
+  font-size: 1.6rem;
+  gap: 1rem;
+  width: 10rem;
+  height: 2.8rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.button-filter:active {
+  -webkit-transform: translateY(0.2rem);
+          transform: translateY(0.2rem);
+}
+
+.card {
+  width: 20rem;
+  margin: 1rem auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: .5rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.1rem 0.1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1rem 3rem;
+}
+
+.card__main-image {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 1rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+.card__title {
+  height: 2rem;
+  width: 20rem;
+  text-align: left;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.empty {
+  margin: 0 auto;
+  position: relative;
+  left: 100%;
+  font-size: 2rem;
+}
+
+@media screen and (max-width: 900px) {
+  .cards {
+    -ms-grid-columns: (auto)[2];
+        grid-template-columns: repeat(2, auto);
+    width: 60rem;
+  }
+  .filter-wrapper {
+    width: 60rem;
+  }
+  .empty {
+    left: 50%;
+  }
+}
+
+@media screen and (max-width: 660px) {
+  .cards {
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+    width: 40rem;
+  }
+  .filter-wrapper {
+    width: 40rem;
+    left: 12%;
+  }
+  .empty {
+    left: 0%;
+  }
+}
+/*# sourceMappingURL=cards.css.map */
